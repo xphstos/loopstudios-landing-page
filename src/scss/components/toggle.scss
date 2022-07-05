@@ -1,0 +1,60 @@
+@use "../mixins" as *;
+
+.toggle {
+  @include size(1.5rem);
+  color: var(--white);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  margin: 0;
+  position: relative;
+  z-index: 1000;
+  margin-left: auto;
+  align-items: center;
+  justify-content: center;
+  display: none;
+  flex-shrink: 0;
+
+  @media screen and (max-width: 870px) {
+    display: inline-grid;
+  }
+
+  &__icon {
+    grid-area: 1 / 1;
+    width: 100%;
+    fill: currentColor;
+    transition: opacity 0.2s ease;
+
+    &--close {
+      opacity: 0;
+    }
+  }
+
+  @at-root {
+    .header--scrolling {
+      .toggle {
+        color: var(--off-black);
+      }
+    }
+
+    .header--open {
+      .toggle {
+        color: var(--white);
+
+        &__icon {
+          &--menu {
+            opacity: 0;
+          }
+
+          &--close {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}

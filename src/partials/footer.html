@@ -1,0 +1,17 @@
+<footer class="footer">
+  <a aria-label="home" class="footer__home">
+    <icon src="./images/logo.svg" class="logo"></icon>
+  </a>
+  <nav class="footer__nav nav nav--footer">
+    <include src="partials/nav.html"></include>
+  </nav>
+  <include
+    src="partials/social.html"
+    locals='{
+    "class": "footer__social"
+  }'
+  ></include>
+  <p class="footer__copyrights">
+    <small>&copy; 2021 Loopstudios. All rights reserved.</small>
+  </p>
+</footer>

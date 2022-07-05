@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Loopstudios landing page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./scss/style.scss" />
+  </head>
+  <body>
+    <include src="partials/header.html"></include>
+    <main class="main">
+      <section class="section section--keyvisual">
+        <header class="section__header">
+          <h1 class="section__title">Immersive experiences that deliver</h1>
+        </header>
+      </section>
+      <section class="section section--leader">
+        <picture class="section__image">
+          <source
+            media="(max-width: 870px)"
+            srcset="./images/mobile/image-interactive.jpg"
+          />
+          <source
+            media="(min-width: 871px)"
+            srcset="./images/desktop/image-interactive.jpg"
+          />
+          <img
+            src="./images/desktop/image-interactive.jpg"
+            alt=""
+            role="presentation"
+          />
+        </picture>
+        <header class="section__header">
+          <h2 class="section__title">The leader in interactive VR</h2>
+          <p class="section__description">
+            Founded in 2011, Loopstudios has been producing world-class virtual
+            reality projects for some of the best companies around the globe.
+            Our award-winning creations have transformed businesses through
+            digital experiences that bind to their brand.
+          </p>
+        </header>
+      </section>
+      <section class="section section--creations">
+        <h2 class="section__title">Our creations</h2>
+        <ul class="section__content creations">
+          <include
+            src="partials/creation.html"
+            locals='{
+            "title": "Deep earth",
+            "image": "deep-earth"
+          }'
+          ></include>
+          <include
+            src="partials/creation.html"
+            locals='{
+            "title": "Night arcade",
+            "image": "night-arcade"
+          }'
+          ></include>
+          <include
+            src="partials/creation.html"
+            locals='{
+            "title": "Soccer team VR",
+            "image": "soccer-team"
+          }'
+          ></include>
+          <include
+            src="partials/creation.html"
+            locals='{
+            "title": "The grid",
+            "image": "grid"
+          }'
+          ></include>
+          <include
+            src="partials/creation.html"
+            locals='{
+            "title": "From up above VR",
+            "image": "from-above"
+          }'
+          ></include>
+          <include
+            src="partials/creation.html"
+            locals='{
+            "title": "Pocket borealis",
+            "image": "pocket-borealis"
+          }'
+          ></include>
+          <include
+            src="partials/creation.html"
+            locals='{
+            "title": "The curiosity",
+            "image": "curiosity"
+          }'
+          ></include>
+          <include
+            src="partials/creation.html"
+            locals='{
+            "title": "Make it fisheye",
+            "image": "fisheye"
+          }'
+          ></include>
+        </ul>
+        <a href="#" class="section__more btn btn--outlined">See all</a>
+      </section>
+    </main>
+    <include src="partials/footer.html"></include>
+    <script src="./index.js"></script>
+  </body>
+</html>

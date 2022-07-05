@@ -1,0 +1,63 @@
+@use "sass:color" as *;
+@use "../functions" as *;
+@use "../helpers" as *;
+
+.footer {
+  @extend %container;
+  display: grid;
+  grid-template-areas: "logo social" "menu copyright";
+  gap: 1rem;
+  background-color: v("black");
+  color: v("white");
+  padding-block: 3.5rem;
+
+  @media screen and (max-width: 870px) {
+    grid-template-areas:
+      "logo" "menu" "social"
+      "copyright";
+    justify-content: center;
+    text-align: center;
+  }
+
+  &__home {
+    grid-area: logo;
+
+    .logo {
+      vertical-align: middle;
+      width: 9rem;
+      fill: currentColor;
+    }
+  }
+
+  &__nav {
+    grid-area: menu;
+    align-self: end;
+    transform: translateX(-1rem); // optical correction
+
+    @media screen and (max-width: 870px) {
+      align-self: unset;
+      transform: translateX(0); // optical correction
+      margin-block: 2rem;
+    }
+  }
+
+  &__social {
+    grid-area: social;
+    justify-self: end;
+
+    @media screen and (max-width: 870px) {
+      justify-self: unset;
+    }
+  }
+
+  &__copyrights {
+    grid-area: copyright;
+    justify-self: end;
+    font-size: 0.875rem;
+    opacity: 0.5;
+
+    @media screen and (max-width: 870px) {
+      justify-self: unset;
+    }
+  }
+}

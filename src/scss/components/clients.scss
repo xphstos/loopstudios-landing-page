@@ -1,0 +1,19 @@
+@use "../functions" as *;
+
+.clients {
+  display: flex;
+  align-items: center;
+  gap: fluid-size(16px, 32px, 870);
+
+  &__item {
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  &__logo {
+    width: 100%;
+    height: auto;
+  }
+}

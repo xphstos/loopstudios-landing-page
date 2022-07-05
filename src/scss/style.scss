@@ -1,0 +1,42 @@
+@forward "./variables";
+@forward "./reset";
+@forward "./components/index";
+@forward "./sections";
+
+body {
+  font: 500 15px / 1.5 "Alata", sans-serif;
+  background: var(--white);
+  color: var(--black);
+
+  &.no-scroll {
+    overflow-y: hidden;
+  }
+}
+
+@for $i from 1 through 6 {
+  h#{$i} {
+    font-family: "Josefin Sans", sans-serif;
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+}
+
+main {
+  min-height: 100vh;
+  display: grid;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style-type: none;
+}

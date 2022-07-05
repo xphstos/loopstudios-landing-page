@@ -1,0 +1,10 @@
+@use "./colors" as *;
+
+// Project Variables
+:root {
+  @each $name, $color in $colors {
+    --#{$name}: #{$color};
+  }
+
+  --header-height: 6.875rem;
+}

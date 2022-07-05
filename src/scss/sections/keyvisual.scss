@@ -1,0 +1,17 @@
+@use "../functions" as *;
+
+.section--keyvisual {
+  display: flex;
+  padding-block: v("header-height");
+  align-items: center;
+  min-height: 70vh;
+  color: v("white");
+  background: url("../images/desktop/image-hero.jpg") no-repeat center / cover;
+
+  .section__title {
+    padding: 0.65em 0.5em 0.4em; // optical correction
+    border: 0.25rem solid v("white");
+    font-size: fluid-size(38px, 72px, 1440);
+    width: min(14ch, 100%);
+  }
+}

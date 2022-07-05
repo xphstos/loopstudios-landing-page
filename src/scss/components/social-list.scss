@@ -1,0 +1,36 @@
+.social-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__link {
+    padding: 0.5rem;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      height: 0.15rem;
+      width: 30%;
+      left: 50%;
+      transform: translateX(-50%) scaleX(0);
+      background-color: currentColor;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    &:hover,
+    &:focus {
+      outline: none;
+
+      &::before {
+        transform: translateX(-50%) scaleX(1);
+      }
+    }
+  }
+
+  &__link-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}

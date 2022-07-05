@@ -1,0 +1,51 @@
+@use "../functions" as *;
+@use "../helpers" as *;
+
+.header {
+  @extend %container;
+  padding-block: 2.5rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  will-change: height;
+  color: v("white");
+  transition: color 0.3s ease, background-color 0.2s ease,
+    padding-block 0.2s ease;
+
+  &--scrolling {
+    padding-block: 1.5rem;
+    color: v("off-black");
+    background: v("white");
+  }
+
+  &__home {
+    position: relative;
+    z-index: 1;
+
+    .logo {
+      vertical-align: middle;
+      width: 12rem;
+      fill: currentColor;
+    }
+
+    @at-root {
+      .header--open {
+        .header__home {
+          .logo {
+            @media screen and (max-width: 870px) {
+              fill: v(white);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__nav {
+    margin-left: auto;
+  }
+}

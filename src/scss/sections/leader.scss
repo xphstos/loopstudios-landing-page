@@ -1,0 +1,52 @@
+@use "sass:color" as *;
+@use "../functions" as *;
+
+.section--leader {
+  display: grid;
+
+  @media screen and (max-width: 870px) {
+    display: block;
+  }
+
+  > * {
+    grid-area: 1 / 1;
+  }
+
+  .section__image {
+    max-width: 100%;
+    width: 720px;
+    height: auto;
+
+    img {
+      width: 100%;
+    }
+
+    @media screen and (max-width: 870px) {
+      width: 100%;
+    }
+  }
+
+  .section__header {
+    padding: 3rem 0 0 fluid-size(32px, 96px, 1100);
+    background-color: v("white");
+    align-self: end;
+    justify-self: end;
+    width: 34rem;
+
+    @media screen and (max-width: 870px) {
+      padding-inline: fluid-size(16px, 96px, 1440);
+      padding-block: 3rem 0;
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  .section__title {
+    margin-bottom: fluid-size(32px, 40px, 1100);
+  }
+
+  .section__description {
+    word-break: keep-all;
+    color: adjust(c("black"), $lightness: 55%);
+  }
+}

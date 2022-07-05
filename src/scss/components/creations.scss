@@ -1,0 +1,36 @@
+.creations {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+  gap: 2rem;
+
+  @media screen and (max-width: 870px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.creation {
+  display: grid;
+
+  &__image,
+  &__title {
+    grid-area: 1 / 1;
+  }
+
+  &__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__title {
+    font-size: 2rem;
+    line-height: 1.1;
+    text-transform: uppercase;
+    color: var(--white);
+    padding-inline: 2rem;
+    padding-block: 1.5rem;
+    align-self: end;
+    margin: 0;
+  }
+}

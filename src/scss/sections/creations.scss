@@ -1,0 +1,29 @@
+.section--creations {
+  display: grid;
+  gap: 4rem;
+
+  @media screen and (max-width: 870px) {
+    gap: 3rem;
+    justify-content: center;
+    padding-top: 0;
+  }
+
+  .section__title {
+    grid-area: 1 / 1;
+    align-self: center;
+    transform: translateY(0.06em);
+
+    @media screen and (max-width: 870px) {
+      text-align: center;
+    }
+  }
+
+  .section__more {
+    justify-self: center;
+
+    @media screen and (min-width: 871px) {
+      grid-area: 1/ 1;
+      justify-self: end;
+    }
+  }
+}

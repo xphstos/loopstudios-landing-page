@@ -1,0 +1,16 @@
+@use "../functions" as *;
+@use "../helpers" as *;
+
+.section {
+  @extend %container;
+  padding-block: v("header-height");
+
+  &__title {
+    font-size: fluid-size(32px, 48px, 1100);
+    line-height: 1;
+
+    @media screen and (max-width: 375px) {
+      word-break: break-word;
+    }
+  }
+}
